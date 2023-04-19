@@ -1,0 +1,102 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>h1{text-align: center;color: aqua;background-color: rgb(138, 43, 226,0.6);}
+        h2{color:blueviolet;-webkit-text-fill-color: aqua;-webkit-text-stroke-width: 1px;}
+        #sh{color:blueviolet;-webkit-text-fill-color: aqua;-webkit-text-stroke-width: 0.5px;}
+        h3{color: mintcream;}
+        p{color: mintcream;font-size: 150%;background-color: rgb(0, 0, 0,0.4);}
+        form{color: mintcream;}
+        .div1{position: relative;top: -3%;}
+        .div2{position: relative;top: 0%;}
+        body{background-color: line;width: 100%;
+        background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg");
+        background-repeat: no-repeat; background-size: cover;background-attachment: fixed;background-position: center;}
+        @media only screen and (max-width: 600px) {
+        
+        
+        h2{background-color: rgba(0, 0, 0, 0.6);width: fit-content;}
+        #sh{background-color: rgba(0, 0, 0, 0.6);width: fit-content;}
+        #ot{color: aquamarine;background-color: rgba(0, 0, 0, 0.6);width: fit-content;}
+            body{background-image: url("https://previews.123rf.com/images/romastudio/romastudio1603/romastudio160300211/54088677-healthy-food-background-studio-photo-of-different-fruits-and-vegetables-on-white-wooden-table-high-r.jpg");
+            background-attachment: fixed; }
+            p{color: black;font-weight: 700;}
+            form{color: black;font-weight: 900;}
+            .div3{width: fit-content;}
+            .div2{width: 0%;}
+            .fm{color:aquamarine;background-color: rgba(0, 0, 0, 0.4);width: fit-content;}
+        
+        }
+           
+        </style>
+<head><title>Book for Food waste</title></head>
+<body>
+    <h1>Book Agent for Food Waste</h1>
+    <h2>Food Waste</h2>
+<div class="div3"><p>Categories of food waste than can be separated as:-<br>
+    1. Kitchen waste<br>
+    2. Dining waste<br>
+    3. Non-edible/Spoiled  food<br> 
+    These can be seen in homes , marriage halls , when a function takes place at home  and any place where cooking or dining takes place. 
+    </p>
+    <h3 id="sh">Kitchen waste</h3>
+    <p>This includes: -<br>
+        1. Rotten vegetables and fruits<br>
+        2. Peels of vegetables and fruits<br>
+        3. Egg shell<br>
+        4. Scraped portions of vegetables/fruits  or slurries.<br>
+        5. Non-veg waste before cooking( NOTE: HAS TO BE ADDED TO NON-EDIBLE)<br>
+        6. Even bread waste<br><br>
+        <h3 id="sh">Dining Waste</h3>
+    <p>This includes: -<br>
+        1. Inedible parts of a meal that we separate (both veg and non-veg).<br>
+        2. Small amount of the leftovers in meal.<br><br>
+        <h3 id="sh">Non-edible/Spoiled food</h3>
+        <p>This includes: -<br>
+            1. Spoiled cooked food<br>
+            2. Non-veg waste before cooking<br>
+            3. Non-veg waste after dining<br>
+            4. Spoiled dairy products , oil<br>        
+    </p></div>
+    <h2>Please fill in your details for booking an agent:-</h2>
+    <form id="book_agent">
+        <label for="name"  class="fm">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="num"  class="fm">Contact Number:</label>
+        <input type="text" id="num" name="num" required><br><br>
+        <label for="adr"  class="fm">Address:</label>
+        <input type="text" id="adr" name="adr" style="height: 12%;" required><h3 id="ot">(Available only in Chennai)</h3><br>
+    </form>
+    <div class="div2">
+        <input ="randomSong" id="search" style="height: 0%;width: 0%;">
+      </div>
+      <div class="div1">
+      <button onclick="book_agent()" type="randomSong" class="srh" style="width: 15%;height: 5%;">Search</button>
+      </div>
+      
+    <h3 id="b"></h3><br><br>
+    <script>
+        function book_agent() {
+           
+              document.getElementById("b").innerHTML="Searching....";
+              const agent=["9941241248","9360853861"];
+              let randomIndex = Math.floor(Math.random() * agent.length);
+              document.getElementById("search").setAttribute("value", agent[randomIndex]);
+              setTimeout(searching, 4000);}
+           
+         function searching() {
+           var a=document.getElementById("name").value;
+           var b=document.getElementById("num").value;
+           var c=document.getElementById("adr").value;
+           var d="https://wa.me/"
+           var e=document.getElementById("search").value;
+           var result = d.concat(e,"?text=You%20have%20been%20booked%20for...(Excess-Food)%0A","Name:","%20",a,"%0A","Contact:","%20",b,"%0A","Address:","%20",c);
+           window.location.href = result;
+
+           
+        }
+    </script>
+
+
+
+</body>
+</html>
