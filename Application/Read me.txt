@@ -1,0 +1,2 @@
+Download the apk file for APP
+The src folder has the java and xml codes and images
